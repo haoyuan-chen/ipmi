@@ -83,6 +83,7 @@ import com.veraxsystems.vxipmi.common.TypeConverter;
 import javax.crypto.NoSuchPaddingException;
 
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 /**
  * Test driver for Encoder/Decoder
@@ -118,6 +119,9 @@ public class DecoderRunner extends Thread {
 	public static void main(String[] args) throws IOException,
 			InterruptedException, NoSuchAlgorithmException,
 			InvalidKeyException, IllegalArgumentException {
+
+//		// 初始化log4j
+//	PropertyConfigurator.configure("log4j.properties");
 
 		logger.info(DateFormat.getInstance().format(
 				new Date(new Date().getTime())));
